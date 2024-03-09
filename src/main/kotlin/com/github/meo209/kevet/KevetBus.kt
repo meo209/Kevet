@@ -25,9 +25,11 @@ fun register(eventClass: KClass<*>, listener: KevetListener) {
  *
  * @param event the event to notify listeners of
  */
-suspend fun notify(event: KevetEvent) = coroutineScope {
-    listeners[event::class]?.forEach {
-        it.handle(event)
+fun notify(event: KevetEvent) {
+    runBlocking {
+        listeners[event::class]?.forEach {
+            it.handle(event)
+        }
     }
 }
 
