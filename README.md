@@ -24,10 +24,18 @@ import com.github.meo209.kevet.*
 # Event Handling
 In Kevet, events are handled by creating a val/var with the `EventBus.handler` function:
 ```kotlin
-val testEventHandler = handler<TestEvent> { event ->
+val testEventHandler = handler<TestEvent>({ event ->
     println("Event handled: $event")
-}
+})
 ```
+
+You can also set a priority:
+```kotlin
+val testEventHandler = handler<TestEvent>({ event ->
+    println("Event handled: $event")
+}, priority = 1)
+```
+The higher the priority is set, the sooner it gets executed.
 
 To call an event you need to call the `EventBus.notify` function:
 ```kotlin
