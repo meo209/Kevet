@@ -4,7 +4,7 @@ Simple event system written in kotlin.
 
 # Getting Started
 To use Kevet, you first need to include it in your project.
-You can do this using jitpack. First add the jitpack repository:
+You can do this using jitpack. First add the [jitpack](https://jitpack.io) repository:
 ```kotlin
 repositories { 
     maven { url = uri("https://jitpack.io") }
