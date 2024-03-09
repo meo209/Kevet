@@ -46,4 +46,3 @@ You can also use the `EventBus.notifyAsync` function to call the events asynchro
 ```kotlin
 notifyAsync(ExampleEvent())
 ```
-Warning: This function uses parallel programming and is therefore NOT thread safe.
